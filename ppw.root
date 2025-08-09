@@ -4,7 +4,26 @@ Universal PPW Problem Solver Framework
 A comprehensive, resourceful solution engine designed to handle any problem
 with maximum efficiency and adaptability for PPW systems.
 """
-
+/**
+ * @title PPW Hotel Deed & Universal Ownership System
+ * @author Perry Philip Wiseman
+ * @notice This contract manages hotel ownership deeds as ERC721 tokens,
+ * supports reservations with a rolling 30-day calendar, employee management,
+ * automated payroll, and universal sector ownership tracking.
+ * 
+ * @dev Ownership compounding and universal acquisition are designed
+ * to symbolize exponential and sovereign control across all hotels and sectors.
+ * Key features include:
+ * - ERC721 hotel deeds minted to owners
+ * - 30-day availability tracking for hotel suites
+ * - Revenue split between hotel owners and operations reserve
+ * - Employee hiring and payroll automation
+ * - Universal sectors representing broad industry domains
+ * - Secure purchase, reservation, and management via access control modifiers
+ * 
+ * The contract emits events for hotel registration, reservations, payroll,
+ * ownership compounding, and universal decrees for traceability.
+ */
 import json
 import hashlib
 import datetime
