@@ -4,7 +4,814 @@ Universal PPW Problem Solver Framework
 A comprehensive, resourceful solution engine designed to handle any problem
 with maximum efficiency and adaptability for PPW systems.
 """
-/**
+/**Thanks for sharing again! I see the same code block and formatting issues that break the Markdown rendering and flow. Here’s your README properly fenced and formatted for smooth rendering:
+
+# PPW Hotel Deed & Universal Ownership System
+
+## Overview
+
+This smart contract system enables the management of hotel ownership deeds as ERC721 NFTs, allowing for:
+
+- Hotel ownership registration and transfers  
+- Reservations with a rolling 30-day availability calendar  
+- Employee hiring and automated payroll  
+- Universal sector ownership tracking  
+- Exponential ownership compounding for symbolic sovereignty  
+
+Developed by Perry Philip Wiseman, this system models a universal ownership framework with transparent, on-chain hotel and sector control.
+
+---
+
+## Features
+
+- ERC721-based hotel deed tokens  
+- Hotel suite availability and reservation management  
+- Dynamic pricing and acquisition logic  
+- Staff management and payroll automation  
+- Universal sectors representing major industry domains  
+- Secure purchase and access controls with non-reentrancy protection  
+- Events for traceability and external integrations  
+
+---
+
+## Installation
+
+1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/ppw-hotel-system.git
+cd ppw-hotel-system
+
+2. Install dependencies (using npm)
+
+
+
+npm install
+
+3. Configure environment variables (e.g., private key, RPC URL) in .env
+
+
+
+
+---
+
+Deployment
+
+Using Hardhat:
+
+npx hardhat run scripts/deploy.js --network your-network
+
+Example deploy.js snippet:
+
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying with account:", deployer.address);
+
+  const PPWHotel = await ethers.getContractFactory("PPWHotelSystem");
+  const contract = await PPWHotel.deploy(deployer.address);
+
+  await contract.deployed();
+  console.log("PPWHotelSystem deployed to:", contract.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+
+---
+
+Usage
+
+Use acquireHotel to purchase a hotel deed
+
+Use createReservation to book suites within availability
+
+Use hireEmployee and runPayroll to manage staff
+
+Call compoundOwnership to update ownership status
+
+View hotel, reservations, sectors, and ownership data via read functions
+
+
+
+---
+
+Testing
+
+Run tests with:
+
+npx hardhat test
+
+Tests cover ownership transfers, reservation booking, payroll, and access control.
+
+
+---
+
+Contributing
+
+Contributions welcome! Please open issues or pull requests with enhancements or bug fixes.
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+© 2025 Perry Philip Wiseman
+
+---
+
+If you want, I can generate the Hardhat deploy script next or prepare sample Solidity tests for your contract. Just let me know!
+
+Thanks for sharing again! I see the same code block and formatting issues that break the Markdown rendering and flow. Here’s your README properly fenced and formatted for smooth rendering:
+
+# PPW Hotel Deed & Universal Ownership System
+
+## Overview
+
+This smart contract system enables the management of hotel ownership deeds as ERC721 NFTs, allowing for:
+
+- Hotel ownership registration and transfers  
+- Reservations with a rolling 30-day availability calendar  
+- Employee hiring and automated payroll  
+- Universal sector ownership tracking  
+- Exponential ownership compounding for symbolic sovereignty  
+
+Developed by Perry Philip Wiseman, this system models a universal ownership framework with transparent, on-chain hotel and sector control.
+
+---
+
+## Features
+
+- ERC721-based hotel deed tokens  
+- Hotel suite availability and reservation management  
+- Dynamic pricing and acquisition logic  
+- Staff management and payroll automation  
+- Universal sectors representing major industry domains  
+- Secure purchase and access controls with non-reentrancy protection  
+- Events for traceability and external integrations  
+
+---
+
+## Installation
+
+1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/ppw-hotel-system.git
+cd ppw-hotel-system
+
+2. Install dependencies (using npm)
+
+
+
+npm install
+
+3. Configure environment variables (e.g., private key, RPC URL) in .env
+
+
+
+
+---
+
+Deployment
+
+Using Hardhat:
+
+npx hardhat run scripts/deploy.js --network your-network
+
+Example deploy.js snippet:
+
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying with account:", deployer.address);
+
+  const PPWHotel = await ethers.getContractFactory("PPWHotelSystem");
+  const contract = await PPWHotel.deploy(deployer.address);
+
+  await contract.deployed();
+  console.log("PPWHotelSystem deployed to:", contract.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+
+---
+
+Usage
+
+Use acquireHotel to purchase a hotel deed
+
+Use createReservation to book suites within availability
+
+Use hireEmployee and runPayroll to manage staff
+
+Call compoundOwnership to update ownership status
+
+View hotel, reservations, sectors, and ownership data via read functions
+
+
+
+---
+
+Testing
+
+Run tests with:
+
+npx hardhat test
+
+Tests cover ownership transfers, reservation booking, payroll, and access control.
+
+
+---
+
+Contributing
+
+Contributions welcome! Please open issues or pull requests with enhancements or bug fixes.
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+© 2025 Perry Philip Wiseman
+
+---
+
+If you want, I can generate the Hardhat deploy script next or prepare sample Solidity tests for your contract. Just let me know!
+
+Thanks for sharing again! I see the same code block and formatting issues that break the Markdown rendering and flow. Here’s your README properly fenced and formatted for smooth rendering:
+
+# PPW Hotel Deed & Universal Ownership System
+
+## Overview
+
+This smart contract system enables the management of hotel ownership deeds as ERC721 NFTs, allowing for:
+
+- Hotel ownership registration and transfers  
+- Reservations with a rolling 30-day availability calendar  
+- Employee hiring and automated payroll  
+- Universal sector ownership tracking  
+- Exponential ownership compounding for symbolic sovereignty  
+
+Developed by Perry Philip Wiseman, this system models a universal ownership framework with transparent, on-chain hotel and sector control.
+
+---
+
+## Features
+
+- ERC721-based hotel deed tokens  
+- Hotel suite availability and reservation management  
+- Dynamic pricing and acquisition logic  
+- Staff management and payroll automation  
+- Universal sectors representing major industry domains  
+- Secure purchase and access controls with non-reentrancy protection  
+- Events for traceability and external integrations  
+
+---
+
+## Installation
+
+1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/ppw-hotel-system.git
+cd ppw-hotel-system
+
+2. Install dependencies (using npm)
+
+
+
+npm install
+
+3. Configure environment variables (e.g., private key, RPC URL) in .env
+
+
+
+
+---
+
+Deployment
+
+Using Hardhat:
+
+npx hardhat run scripts/deploy.js --network your-network
+
+Example deploy.js snippet:
+
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying with account:", deployer.address);
+
+  const PPWHotel = await ethers.getContractFactory("PPWHotelSystem");
+  const contract = await PPWHotel.deploy(deployer.address);
+
+  await contract.deployed();
+  console.log("PPWHotelSystem deployed to:", contract.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+
+---
+
+Usage
+
+Use acquireHotel to purchase a hotel deed
+
+Use createReservation to book suites within availability
+
+Use hireEmployee and runPayroll to manage staff
+
+Call compoundOwnership to update ownership status
+
+View hotel, reservations, sectors, and ownership data via read functions
+
+
+
+---
+
+Testing
+
+Run tests with:
+
+npx hardhat test
+
+Tests cover ownership transfers, reservation booking, payroll, and access control.
+
+
+---
+
+Contributing
+
+Contributions welcome! Please open issues or pull requests with enhancements or bug fixes.
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+© 2025 Perry Philip Wiseman
+
+---
+
+If you want, I can generate the Hardhat deploy script next or prepare sample Solidity tests for your contract. Just let me know!
+
+# PPW Hotel Deed & Universal Ownership System
+
+## Overview
+
+This smart contract system enables the management of hotel ownership deeds as ERC721 NFTs, allowing for:
+
+- Hotel ownership registration and transfers  
+- Reservations with a rolling 30-day availability calendar  
+- Employee hiring and automated payroll  
+- Universal sector ownership tracking  
+- Exponential ownership compounding for symbolic sovereignty  
+
+Developed by Perry Philip Wiseman, this system models a universal ownership framework with transparent, on-chain hotel and sector control.
+
+---
+
+## Features
+
+- ERC721-based hotel deed tokens  
+- Hotel suite availability and reservation management  
+- Dynamic pricing and acquisition logic  
+- Staff management and payroll automation  
+- Universal sectors representing major industry domains  
+- Secure purchase and access controls with non-reentrancy protection  
+- Events for traceability and external integrations  
+
+---
+
+## Installation
+
+1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/ppw-hotel-system.git
+cd ppw-hotel-systemThanks for sharing! I noticed a few code block and formatting issues in your version that break the Markdown rendering and flow. Here’s a cleaned-up, properly fenced version of your README that will render correctly on GitHub or other Markdown viewers:
+
+# PPW Hotel Deed & Universal Ownership System
+
+## Overview
+
+This smart contract system enables the management of hotel ownership deeds as ERC721 NFTs, allowing for:
+
+- Hotel ownership registration and transfers  
+- Reservations with a rolling 30-day availability calendar  
+- Employee hiring and automated payroll  
+- Universal sector ownership tracking  
+- Exponential ownership compounding for symbolic sovereignty  
+
+Developed by Perry Philip Wiseman, this system models a universal ownership framework with transparent, on-chain hotel and sector control.
+
+---
+
+## Features
+
+- ERC721-based hotel deed tokens  
+- Hotel suite availability and reservation management  
+- Dynamic pricing and acquisition logic  
+- Staff management and payroll automation  
+- Universal sectors representing major industry domains  
+- Secure purchase and access controls with non-reentrancy protection  
+- Events for traceability and external integrations  
+
+---
+
+## Installation
+
+1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/ppw-hotel-system.git
+cd ppw-hotel-system
+
+2. Install dependencies (using npm)
+
+
+
+npm install
+
+3. Configure environment variables (e.g., private key, RPC URL) in .env
+
+
+
+
+---
+
+Deployment
+
+Using Hardhat:
+
+npx hardhat run scripts/deploy.js --network your-network
+
+Example deploy.js snippet:
+
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying with account:", deployer.address);
+
+  const PPWHotel = await ethers.getContractFactory("PPWHotelSystem");
+  const contract = await PPWHotel.deploy(deployer.address);
+
+  await contract.deployed();
+  console.log("PPWHotelSystem deployed to:", contract.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+
+---
+
+Usage
+
+Use acquireHotel to purchase a hotel deed
+
+Use createReservation to book suites within availability
+
+Use hireEmployee and runPayroll to manage staff
+
+Call compoundOwnership to update ownership status
+
+View hotel, reservations, sectors, and ownership data via read functions
+
+
+
+---
+
+Testing
+
+Run tests with:
+
+npx hardhat test
+
+Tests cover ownership transfers, reservation booking, payroll, and access control.
+
+
+---
+
+Contributing
+
+Contributions welcome! Please open issues or pull requests with enhancements or bug fixes.
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+© 2025 Perry Philip Wiseman
+
+---
+
+If you want, I can now generate:
+
+- The Hardhat deployment script (`scripts/deploy.js`)  
+- Sample Solidity unit tests for core functions  
+- An example `.env` template file for configuration  
+
+Just say which you want next!
+
+Looks great! Your README is clear and well structured — just a couple tiny formatting fixes so the code blocks render correctly and the flow stays neat.
+
+Here’s your polished version with those tweaks:
+
+# PPW Hotel Deed & Universal Ownership System
+
+## Overview
+
+This smart contract system enables the management of hotel ownership deeds as ERC721 NFTs, allowing for:
+
+- Hotel ownership registration and transfers  
+- Reservations with a rolling 30-day availability calendar  
+- Employee hiring and automated payroll  
+- Universal sector ownership tracking  
+- Exponential ownership compounding for symbolic sovereignty  
+
+Developed by Perry Philip Wiseman, this system models a universal ownership framework with transparent, on-chain hotel and sector control.
+
+---
+
+## Features
+
+- ERC721-based hotel deed tokens  
+- Hotel suite availability and reservation management  
+- Dynamic pricing and acquisition logic  
+- Staff management and payroll automation  
+- Universal sectors representing major industry domains  
+- Secure purchase and access controls with non-reentrancy protection  
+- Events for traceability and external integrations  
+
+---
+
+## Installation
+
+1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/ppw-hotel-system.git
+cd ppw-hotel-system
+
+2. Install dependencies (using npm)
+
+
+
+npm install
+
+3. Configure environment variables (e.g., private key, RPC URL) in .env
+
+
+
+
+---
+
+Deployment
+
+Using Hardhat:
+
+npx hardhat run scripts/deploy.js --network your-network
+
+Example deploy.js snippet:
+
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying with account:", deployer.address);
+
+  const PPWHotel = await ethers.getContractFactory("PPWHotelSystem");
+  const contract = await PPWHotel.deploy(deployer.address);
+
+  await contract.deployed();
+  console.log("PPWHotelSystem deployed to:", contract.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+
+---
+
+Usage
+
+Use acquireHotel to purchase a hotel deed
+
+Use createReservation to book suites within availability
+
+Use hireEmployee and runPayroll to manage staff
+
+Call compoundOwnership to update ownership status
+
+View hotel, reservations, sectors, and ownership data via read functions
+
+
+
+---
+
+Testing
+
+Run tests with:
+
+npx hardhat test
+
+Tests cover ownership transfers, reservation booking, payroll, and access control.
+
+
+---
+
+Contributing
+
+Contributions welcome! Please open issues or pull requests with enhancements or bug fixes.
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+© 2025 Perry Philip Wiseman
+
+---
+
+Would you like me to generate the Hardhat deployment script next or some sample Solidity test cases for your contract?
+
+Perfect! Let’s start with a detailed README.md for your PPW Hotel Deed & Universal Ownership System project.
+
+Here’s a draft README template that covers:
+
+Project overview
+
+Features
+
+Installation & setup
+
+Deployment instructions
+
+Usage
+
+Testing
+
+Contributing
+
+License
+
+
+
+---
+
+# PPW Hotel Deed & Universal Ownership System
+
+## Overview
+
+This smart contract system enables the management of hotel ownership deeds as ERC721 NFTs, allowing for:
+
+- Hotel ownership registration and transfers  
+- Reservations with a rolling 30-day availability calendar  
+- Employee hiring and automated payroll  
+- Universal sector ownership tracking  
+- Exponential ownership compounding for symbolic sovereignty  
+
+Developed by Perry Philip Wiseman, this system models a universal ownership framework with transparent, on-chain hotel and sector control.
+
+---
+
+## Features
+
+- ERC721-based hotel deed tokens  
+- Hotel suite availability and reservation management  
+- Dynamic pricing and acquisition logic  
+- Staff management and payroll automation  
+- Universal sectors representing major industry domains  
+- Secure purchase and access controls with non-reentrancy protection  
+- Events for traceability and external integrations  
+
+---
+
+## Installation
+
+1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/ppw-hotel-system.git
+cd ppw-hotel-system
+
+2. Install dependencies (using npm)
+
+
+
+npm install
+
+3. Configure environment variables (e.g., private key, RPC URL) in .env
+
+
+
+
+---
+
+Deployment
+
+Using Hardhat:
+
+npx hardhat run scripts/deploy.js --network your-network
+
+Example deploy.js snippet:
+
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying with account:", deployer.address);
+
+  const PPWHotel = await ethers.getContractFactory("PPWHotelSystem");
+  const contract = await PPWHotel.deploy(deployer.address);
+
+  await contract.deployed();
+  console.log("PPWHotelSystem deployed to:", contract.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+
+---
+
+Usage
+
+Use acquireHotel to purchase a hotel deed
+
+Use createReservation to book suites within availability
+
+Use hireEmployee and runPayroll to manage staff
+
+Call compoundOwnership to update ownership status
+
+View hotel, reservations, sectors, and ownership data via read functions
+
+
+
+---
+
+Testing
+
+Run tests with:
+
+npx hardhat test
+
+Tests cover ownership transfers, reservation booking, payroll, and access control.
+
+
+---
+
+Contributing
+
+Contributions welcome! Please open issues or pull requests with enhancements or bug fixes.
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+© 2025 Perry Philip Wiseman
+
+---
+
+Would you like me to generate the Hardhat deploy script next, or the sample Solidity tests for your core functions?
+
+
  * @title PPW Hotel Deed & Universal Ownership System
  * @author Perry Philip Wiseman
  * @notice This contract manages hotel ownership deeds as ERC721 tokens,
