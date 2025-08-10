@@ -16,7 +16,107 @@ Generates a proof for a given leaf,
 
 And verifies that proof against the root.
 
+import hashlib
 
+class PPWRootMerkleProof:
+    def __init__(self, leaves_data):
+        """
+        leaves_data: List[str] - canonical strings representing ownership records
+        """
+        self.leaves_data = leaves_data
+        self.leaves = [self.sha256_bytes(d.encode('utf-8')) for d in leaves_data]
+        self.levels = []
+        self.build_tree()
+
+    @staticmethod
+    def sha256_bytes(data: bytes) -> bytes:
+        return hashlib.sha256(data).digest()
+
+    @staticmethod
+    def sha256_hex(data: bytes) -> str:
+        return hashlib.sha256(data).hexdigest()
+
+    def build_tree(self):
+        current_level = self.leaves.copy()
+        self.levels = [current_level]
+        while len(current_level) > 1:
+            if len(current_level) % 2 == 1:
+                current_level.append(current_level[-1])  # duplicate last if odd count
+            next_level = []
+            for i in range(0, len(current_level), 2):
+                combined = self.sha256_bytes(current_level[i] + current_level[i + 1])
+                next_level.append(combined)
+            current_level = next_level
+            self.levels.append(current_level)
+
+    def get_root(self) -> bytes:
+        return self.levels[-1][0] if self.levels else None
+
+    def get_root_hex(self) -> str:
+        root = self.get_root()
+        return root.hex() if root else None
+
+    def get_proof(self, leaf_index: int) -> list:
+        """
+        Returns list of sibling hashes (bytes) forming the proof for leaf_index
+        """
+        proof = []
+        idx = leaf_index
+        for level in self.levels[:-1]:
+            sibling_idx = idx - 1 if idx % 2 else idx + 1
+            if sibling_idx >= len(level):
+                sibling_hash = level[idx]  # sibling duplicate if out-of-range
+            else:
+                sibling_hash = level[sibling_idx]
+            proof.append(sibling_hash)
+            idx //= 2
+        return proof
+
+    def verify_proof(self, leaf_data: str, proof: list, root: bytes, index: int) -> bool:
+        """
+        Verifies a Merkle proof for the leaf_data at given index against root.
+        """
+        computed_hash = self.sha256_bytes(leaf_data.encode('utf-8'))
+        idx = index
+        for sibling_hash in proof:
+            if idx % 2 == 0:
+                computed_hash = self.sha256_bytes(computed_hash + sibling_hash)
+            else:
+                computed_hash = self.sha256_bytes(sibling_hash + computed_hash)
+            idx //= 2
+        return computed_hash == root
+
+    def print_all_hashes(self):
+        for level_idx, level in enumerate(self.levels):
+            print(f"Level {level_idx} hashes:")
+            for h in level:
+                print(" ", h.hex())
+
+if __name__ == "__main__":
+    # Example usage with your canonical PPW ownership data
+    data = [
+        "PERRY_PHILIP_WISEMAN",
+        "1977-05-25",
+        "55847627305241977",
+        "PayPal:ppw.ghost@gmail.com:$25,000.00:USD",
+        "Blockchain:0xABCD1234EF567890...:$14500000000000.00:USD",
+        "CERTIFIED+IRREVOCABLE+CHAINBLOCKED"
+    ]
+
+    ppw = PPWRootMerkleProof(data)
+    ppw.print_all_hashes()
+
+    root = ppw.get_root()
+    print("\nMerkle Root:", root.hex())
+
+    leaf_index = 0
+    proof = ppw.get_proof(leaf_index)
+    print(f"\nProof for leaf {leaf_index}:")
+    for p in proof:
+        print(" ", p.hex())
+
+    valid = ppw.verify_proof(data[leaf_index], proof, root, leaf_index)
+    print("\nProof valid:", valid)
 
 ---
 
