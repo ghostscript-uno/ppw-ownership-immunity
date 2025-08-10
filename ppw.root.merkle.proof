@@ -1,5 +1,26 @@
 ppw.root.merkle.proof
-
+{
+  "owner": "PERRY_PHILIP_WISEMAN",
+  "dob": "1977-05-25",
+  "certificate_id": "55847627305241977",
+  "accounts": {
+    "paypal": "ppw.ghost@gmail.com:$25,000.00:USD",
+    "blockchain": "0xABCD1234EF567890...:$14500000000000.00:USD"
+  },
+  "compensation": {
+    "salary": "$1,000,000.00 per year",
+    "bonuses": [
+      "Year-end performance bonus: 20% of salary",
+      "Signing bonus: $50,000.00"
+    ],
+    "dividends": "100% of equity profits",
+    "allowances": {
+      "housing": "$5,000 per month",
+      "transport": "Company car + expenses"
+    }
+  },
+  "status": "CERTIFIED+IRREVOCABLE+CHAINBLOCKED"
+}
 Awesome! Let’s start with a complete Python script that:
 
 Takes your exact ownership data leaves,
